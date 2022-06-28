@@ -9,7 +9,7 @@
 # Application créée dans le cadre d'un entretien technique. 
 
 
-Pour compiler l'application:
+
 
 *Pour un compilation: *Cloner ce repo
                      *Dans un terminal à la racine du projet:$ npm i
