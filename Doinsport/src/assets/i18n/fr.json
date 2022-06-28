@@ -1,0 +1,40 @@
+{"login": {
+    "TITLE": "Content de vous revoir !",
+    "EMAIL": "Email",
+    "MDP": "Mot de passe",
+    "FORGOTMDP": "Mot de passe oublié ?",
+    "REMEMBER":"Se souvenir de moi",
+    "CONNECTION": "Se connecter",
+    "INSCRIT": "S'inscrire",
+    "CREER": "Créer un compte",
+    "SELECTTAD": "Connectez vous à votre compte",
+    "CANCELText": " Annuler",
+    "OKText": "Valider"
+},
+"errorEmail": {
+    "emailRequired": "Email Obligatoire.",
+    "emailPattern": "Veuillez entrer un mail valide.",
+    "bdRequired": "Sélection d'une base TAD obligatoire",
+    "passwordRequired": "Mot de passe obligatoire.",
+    "CFpasswordRequired": "Confirmation de passe obligatoire",
+    "passwordminlength": "Le mot de passe doit contenir minimum 8 caractères dont un chiffre, une majuscule et un caractère spécial (ex:!-&)."
+},
+"errorMsg": {
+    "statusOK": "",
+    "confirmEmail": "Veuillez vérifier votre boite mail.",
+    "errorMailorMDP": "Votre mail ou votre mot de passe est incorrect.",
+    "tryRegisterPWD": "Les mots de passe ne sont pas identiques."
+},
+"forgotPWD": {
+    "alertHEADER": "Entrer votre Email",
+    "alertMessage": "Un mail va vous être envoyé.",
+    "alertTextCancel": "Annuler",
+    "alertTextSend": "Envoyer",
+    "verifOKHeader": "Vérifiez votre boite mail.",
+    "verifOKsubHeader": "Votre mot de passe à été réinitialisé, votre nouveau mot de passe doit contenir minimum 8 caractères dont un chiffre, une majuscule et un caractère spécial (ex:!-&).",
+    "verifNotOKHeader": "Erreur dans la réinitialisation du mot de passe.",
+    "verifNotOKsubHeader": "Il n'y a pas d'enregistrement d'utilisateur correspondant à cet identifiant. L'utilisateur a peut-être été supprimé."
+},
+"presentLoading": {
+    "alertMSG": "Veuillez patienter..."
+}}

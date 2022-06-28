@@ -1,0 +1,75 @@
+<ion-content class="content_back_ground">
+  <div class="padding">
+    <ion-list class="ionList" no-lines>
+      <div class="logo">
+        <div style="display: flex; align-items: center;justify-content: center;">
+          <img class="img" src="assets/img/LogoDoinsport.PNG">
+        </div>
+
+        <h2 style="text-align:center">{{ 'login.TITLE' | translate }}</h2>
+        <h6 style="text-align:center">{{ 'login.SELECTTAD' | translate }}</h6>
+      </div>
+      <form class="form" [formGroup]="validations_form" (ngSubmit)="login()">
+        <ion-item>
+          <ion-label position="floating" color="medium">
+            {{ 'login.EMAIL' | translate }}
+          </ion-label>
+          <ion-input color="primary" type="text" formControlName="username"></ion-input>
+          <ion-icon name="mail-outline" slot="end"></ion-icon>
+        </ion-item>
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.username">
+            <div color="primary" class="error-message"
+              *ngIf="validations_form.get('username').hasError(validation.type) && (validations_form.get('username').dirty || validations_form.get('username').touched)">
+              {{ 'errorEmail.'+validation.message | translate}}
+            </div>
+          </ng-container>
+        </div>
+        <ion-item>
+          <ion-label position="floating" color="medium">
+            {{ 'login.MDP' | translate }}
+          </ion-label>
+          <ion-input color="primary" formControlName="password" [type]="passwordType" clearOnEdit="false"
+            class="form-controll" required></ion-input>
+          <ion-icon slot="end" [name]="passwordIcon" class="passwordIcon" (click)='hideShowPassword()'></ion-icon>
+        </ion-item>
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.password">
+            <div class="error-message"
+              *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
+              {{ 'errorEmail.'+validation.message | translate}}
+            </div>
+          </ng-container>
+        </div>
+
+        <!-- <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.BDSelected">
+            <div class="error-message"
+              *ngIf="validations_form.get('BDselected').hasError(validation.type) && (validations_form.get('BDselected').dirty || validations_form.get('BDselected').touched)">
+              {{ 'errorEmail.'+validation.message | translate}}
+            </div>
+          </ng-container>
+        </div> -->
+
+        <ion-row>
+          <ion-col width-50 style="text-align: center">
+            <ion-button style="width:200px" (click)="login()" color="warning" [disabled]="!validations_form.valid">
+              {{ 'login.CONNECTION' | translate }}
+            </ion-button><br>
+            <ion-button color="warning" fill="outline" style="width:200px" class="submit-btn">
+              {{ 'login.INSCRIT' | translate }}
+            </ion-button>
+
+          </ion-col>
+        </ion-row>
+        <label class="error-message">{{'errorMsg.'+errorMessage | translate}}</label>
+      </form>
+      <ion-item class="passForgot" lines="none">
+        <ion-checkbox color="medium" mode="md" slot="start" [(ngModel)]="remember"></ion-checkbox>
+        <ion-button color="medium" fill="clear" slot="end">{{ 'login.REMEMBER' | translate }}</ion-button>
+        <ion-button color="medium" fill="clear" slot="end" (click)="showForgotPassword()">{{ 'login.FORGOTMDP' |
+          translate }}</ion-button>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

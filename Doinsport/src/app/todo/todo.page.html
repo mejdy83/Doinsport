@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-title>Mes todos</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col class="ion-align-self-start">
+      <ion-searchbar placeholder="Rechercher..." 
+      (ionInput)="updateSearchResults()" ></ion-searchbar>
+    </ion-col>
+    <ion-col class="ion-align-self-end">
+      <ion-button style="width:120px" color="warning"  (click)="presentModal()"><ion-icon name="add-outline"></ion-icon>Nouveau</ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row *ngFor="let item of listTodos;let index=index">
+    <ion-col class="ion-align-self-start">
+      <ion-checkbox mode="md" [(ngModel)]="listTodos[index].done" (click)="checkTodo(listTodos[index].id)"></ion-checkbox>
+    </ion-col>
+    <ion-col class="ion-align-self-center">
+      <h6>{{ item.label }}</h6>
+    </ion-col>
+    <ion-col class="ion-align-self-end">
+      <ion-button color="warning" (click)="deleteTodo(listTodos[index].id)">Supprimer</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Chargement des data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ajouter un todo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    
+    <ion-textarea [(ngModel)]="todo" placeholder="Ajouter une nouvelle tâche à réaliser..."></ion-textarea>
+  </ion-item>
+  <ion-button color="warning" style="text-align:center" (click)="postTodo()">Ajouter</ion-button>
+</ion-content>

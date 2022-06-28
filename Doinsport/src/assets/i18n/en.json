@@ -1,0 +1,40 @@
+{"login": {
+    "TITLE": "TaxiTOD Driver",
+    "EMAIL": "Email",
+    "MDP": "Password",
+    "REMEMBER":"Remember me",
+    "FORGOTMDP": "Forgot your password ?",
+    "CONNECTION": "Log In",
+    "INSCRIT": "Register",
+    "CREER": "Create an account",
+    "SELECTTAD": "Select TAD Services",
+    "CANCELText": " Cancel",
+    "OKText": "Valid"
+},
+"errorEmail": {
+    "emailRequired": "Mandatory Email.",
+    "emailPattern": "Please enter a valid email.",
+    "bdRequired": "Selection of a mandatory TAD database",
+    "passwordRequired": "Password required.",
+    "CFpasswordRequired": "Confirm password required",
+    "passwordminlength": "The password must contain at least 8 characters including a number, a capital letter and a special character (eg! - &)."
+},
+"errorMsg": {
+    "statusOK": "",
+    "confirmEmail": "Please check your email box.",
+    "errorMailorMDP": "Your email or password is incorrect.",
+    "tryRegisterPWD": "Passwords are not the same."
+},
+"forgotPWD": {
+    "alertHEADER": "Enter your Email",
+    "alertMessage": "An email will be sent to you.",
+    "alertTextCancel": "Cancel",
+    "alertTextSend": "Send",
+    "verifOKHeader": "Check your mailbox.",
+    "verifOKsubHeader": "Your password has been reset, your new password must contain at least 8 characters including a number, a capital letter and a special character (ex:! - &).",
+    "verifNotOKHeader": "Error resetting password.",
+    "verifNotOKsubHeader": "There is no user record corresponding to this identifier. The user may have been deleted."
+},
+"presentLoading": {
+    "alertMSG": "Please wait..."
+}}
