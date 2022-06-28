@@ -16,13 +16,14 @@ Pour compiler l'application:
     *Pour lancer le projet en local:  $ ionic serve 
     *Pour compiler sur android:       $ionic cordova platform add android 
                                       $ionic cordova run android // Celà a le rôle induit de build android
+    *Module de traduction présent, seulement côté code
+    *Ajout de todo
+    *Sauvegarde des identifiants
+    *Modal
+    *Login/API/Rxjs
+    *JWT
+   
 
 
-*Module de traduction présent, changement de langue uniquement côté code.
-*Ajout de Todo
-*Sauvegarde des identifiants
-*Modal
-*Login/API/Rxjs
-*JWT
 
 
